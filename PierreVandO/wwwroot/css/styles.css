@@ -1,3 +1,13 @@
 body{
 	background-color: blanchedalmond;
 }
+
+.jumbotron{
+	background-color: rgb(212, 142, 49);
+	border-bottom: 8px solid burlywood;
+}
+
+#footer{
+	background-color: rgb(219, 89, 102);
+	border-top: 8px solid brown;
+}
