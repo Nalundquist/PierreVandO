@@ -17,6 +17,7 @@ namespace PierreVandO.Models
 			VendorDesc = desc;
 			_vendorList.Add(this);
 			VendorId = _vendorList.Count;
+			VendorOrders = new List<Order> {};
 		}
 
 		public static List<Vendor> GetVendors()
@@ -37,7 +38,7 @@ namespace PierreVandO.Models
 
 		public void AddOrder(Order order)
 		{
-			
+			VendorOrders.Add(order);
 		}
 	}
 }
