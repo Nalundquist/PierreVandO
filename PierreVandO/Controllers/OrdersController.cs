@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using PierreVandO.Models;
+using System;
+using System.Collections.Generic;
 
 namespace PierreVandO.Controllers
 {
@@ -7,14 +10,14 @@ namespace PierreVandO.Controllers
 		[HttpGet("/orders")]
 		public ActionResult Index() 
 		{
-			List<Order> orderList = Orders.GetOrders();
+			List<Order> orderList = Order.GetOrders();
 			return View(orderList);
 		}
 
 		[HttpGet("/vendors/{vendorId}/orders/new")]
 		public ActionResult New(int vendorId)
 		{
-			Vendor vendor = Vendor.FindVendor(id);
+			Vendor vendor = Vendor.FindVendor(vendorId);
 			return View(vendor);
 		}
 

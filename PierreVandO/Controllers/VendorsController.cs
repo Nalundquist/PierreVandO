@@ -1,4 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
+using PierreVandO.Models;
+using System;
+using System.Collections.Generic;
 
 namespace PierreVandO.Controllers
 {
@@ -28,7 +31,7 @@ namespace PierreVandO.Controllers
 		public ActionResult Show(int vendorId)
 		{
 			Dictionary<string, object> model = new Dictionary<string, object>();
-			Vendor vendor = Vendor.FindVendor(id);
+			Vendor vendor = Vendor.FindVendor(vendorId);
 			List<Order> orderList = vendor.VendorOrders;
 			model.Add("vendor", vendor);
 			model.Add("orders", orderList);
@@ -39,7 +42,7 @@ namespace PierreVandO.Controllers
 		public ActionResult Create(int vendorId, string name, string desc, string price, string date)
 		{
 			Dictionary<string, object> model = new Dictionary<string, object>();
-			Vendor vendor = Vendor.FindVendor(id);
+			Vendor vendor = Vendor.FindVendor(vendorId);
 			Order order = new Order(name, desc, price, date);
 			vendor.AddOrder(order);
 			List<Order> orderList = vendor.VendorOrders;

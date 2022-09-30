@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en-US">
+	<head>
+		<meta charset="utf-8">
+		<title>Pierre's Vendor/Order Tracker</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+	</head>
+	<body>
+		@using PierreVandO.Models;
+		<h1>Hello again, Pierre</h1>
+		@if (Model.Count == 0)
+		{
+			<p>Pierre...I regret to inform you that you have no wholesalers at the moment.</p>
+			<p>No matter.  Pearls before swine.</p>
+			<p>We will go to a new city, one that can appreciate the intricacies of French baking.</p>
+		}
+		@foreach (Vendor vendor in Model)
+		{
+			<a href="/vendors/@vendor.VendorId">@vendor.VendorName</a>
+		}
+	</body>
+</html>
