@@ -6,6 +6,24 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	</head>
 	<body>
-		
+		@using PierreVandO.Models;
+
+		@if (@Model.Count == 0)
+		{
+			<p>No orders at all.  Strange.  Why do people not want baguettes anymore?  When did puff pastry lose its allure?</p> 
+		}
+		else
+		{
+			<h3>Here are your orders.  Every one you've told me.  I will recite them.</h3>
+			<ul>
+			@foreach (Order order in Model)
+				{	
+					<li>
+						@order.OrderName - @order.OrderDesc
+						@order.OrderPrice // @order.OrderDate
+					</li>
+				}
+			</ul>
+		}
 	</body>
 </html>
