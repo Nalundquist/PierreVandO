@@ -43,7 +43,7 @@ namespace PierreVandO.Models
 
 		public static void RemoveVendor(int id)
 		{
-			
+			_vendorList.RemoveAt(id-1);
 		}
 	}
 }

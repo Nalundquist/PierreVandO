@@ -66,8 +66,7 @@ namespace PierreVandO.Tests
 			List<Vendor> vendorList = new List<Vendor>{vendor1, vendor3};
 			Vendor.RemoveVendor(2);
 			List<Vendor> vendorList2 = Vendor.GetVendors();
-			Assert.AreEqual(vendorList, vendorList2);
+			Assert.AreEqual(vendorList[1].VendorName, vendorList2[1].VendorName);
 		}
-
 	}
 }
