@@ -19,3 +19,11 @@ body{
 	margin-left: 15%;
 	margin-right: 20%;
 }
+
+form{
+	padding: 20px;
+	font-size: .8rem;
+	background-color: antiquewhite;
+	border: 5px solid rgb(195, 138, 52);
+	border-radius: 3px;
+}
