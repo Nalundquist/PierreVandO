@@ -6,6 +6,16 @@
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	</head>
 	<body>
-		
+		<h3>Input the new Vendor's Information in the following form at your leisure, Pierre.</h3>
+		<form action="/vendors" method="post">
+			<label for="name">Vendor/Business Name</label>
+			<input id="name" name="name" type="text">
+			<label for="desc">A description of the vendor.  Be honest.</label>
+			<input id="desc" name="desc" type="textarea">
+			<button type="submit">Add new Vendor</button>
+		</form>
+
+		<p><a href="/">Back to where you began.</a></p>
+		<p><a href="/vendors">Back to your vendors.</a></p>
 	</body>
 </html>
