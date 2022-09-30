@@ -4,6 +4,7 @@
 <h2>New order with @Model.VendorName</h2>
 <h3>Input the following to make a useful little note of your transaction with @Model.VendorName</h3>
 <form action="/vendors/@Model.VendorId" method="post">
+	<input id="vendorId" name="vendorId" type="hidden" value="@Model.VendorId">
 	<label for="name">A Label or Title for the transaction (Keep it short yet memorable, Pierre.)</label>
 	<input id="name" name="name" type="text">
 	<label for="desc">A description of the transaction.  Items and quantities, how you felt while ringing it up.  Whatever you wish.</label>
