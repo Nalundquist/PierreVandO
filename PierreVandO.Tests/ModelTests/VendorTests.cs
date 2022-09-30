@@ -14,5 +14,12 @@ namespace PierreVandO.Tests
 			Vendor vendor = new Vendor("Vendy", "Loves to Vend");
 			Assert.AreEqual(typeof(Vendor), vendor.GetType());
 		}
+
+		[TestMethod]
+		public void VendorConstructor_HoldsName_String()
+		{
+			Vendor vendor = new Vendor("Vendy", "Loves to Vend");
+			Assert.AreEqual("Vendy", vendor.Name);
+		}
 	}
 }
