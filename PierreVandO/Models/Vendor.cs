@@ -40,5 +40,10 @@ namespace PierreVandO.Models
 		{
 			VendorOrders.Add(order);
 		}
+
+		public static void RemoveVendor(int id)
+		{
+			
+		}
 	}
 }

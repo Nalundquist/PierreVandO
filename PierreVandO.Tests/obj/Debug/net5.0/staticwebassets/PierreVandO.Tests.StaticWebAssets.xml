@@ -1,1 +1,3 @@
-﻿<StaticWebAssets Version="1.0" />
+﻿<StaticWebAssets Version="1.0">
+  <ContentRoot BasePath="_content/PierreVandO" Path="C:\Users\nalun\OneDrive\desktop\PierreVandO\PierreVandO\wwwroot\" />
+</StaticWebAssets>

@@ -111,3 +111,4 @@ C:\Users\nalun\OneDrive\desktop\PierreVandO\PierreVandO.Tests\obj\Debug\net5.0\P
 C:\Users\nalun\OneDrive\desktop\PierreVandO\PierreVandO.Tests\obj\Debug\net5.0\ref\PierreVandO.Tests.dll
 C:\Users\nalun\OneDrive\desktop\PierreVandO\PierreVandO.Tests\obj\Debug\net5.0\PierreVandO.Tests.pdb
 C:\Users\nalun\OneDrive\desktop\PierreVandO\PierreVandO.Tests\obj\Debug\net5.0\PierreVandO.Tests.genruntimeconfig.cache
+C:\Users\nalun\OneDrive\desktop\PierreVandO\PierreVandO.Tests\bin\Debug\net5.0\PierreVandO.Tests.StaticWebAssets.xml

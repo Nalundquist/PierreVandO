@@ -56,5 +56,18 @@ namespace PierreVandO.Tests
 			vendor1.AddOrder(order2);
 			Assert.AreEqual(order2, vendor1.VendorOrders[0]);
 		}
+
+		[TestMethod]
+		public void RemoveVendor_RemovesTargetedVendor_List()
+		{
+			Vendor vendor1 = new Vendor("Businesso", "Requires Vendors to Live");
+			Vendor vendor2 = new Vendor("Vendy", "Loves to Vend");
+			Vendor vendor3 = new Vendor("Reginald Exchangington III", "Buying and Selling Items: Can't Imagine Life without It.");
+			List<Vendor> vendorList = new List<Vendor>{vendor1, vendor3};
+			Vendor.RemoveVendor(2);
+			List<Vendor> vendorList2 = Vendor.GetVendors();
+			Assert.AreEqual(vendorList, vendorList2);
+		}
+
 	}
 }
