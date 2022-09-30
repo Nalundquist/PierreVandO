@@ -14,9 +14,23 @@ namespace PierreVandO.Models
 
 		public Order(string name, string desc, string price, string date)
 		{
-			
+			OrderName = name;
+			OrderDesc = desc;
+			OrderPrice = price;
+			OrderDate = date;
+			_orderList.Add(this);
+			OrderId = _orderList.Count;
 		}
 
+		public static List<Order> GetOrders()
+		{
+			List<Order> blankOrderList = new List<Order> {};
+			return blankOrderList;
+		}
 
+		public static void ClearOrders()
+		{
+			_orderList.Clear();
+		}
 	}
 }

@@ -13,9 +13,21 @@ namespace PierreVandO.Models
 
 		public Vendor(string name, string desc)
 		{
-			
+			VendorName = name;
+			VendorDesc = desc;
+			_vendorList.Add(this);
+			VendorId = _vendorList.Count;
 		}
 
+		public static List<Vendor> GetVendors()
+		{
+			List<Vendor> blankVendorList = new List<Vendor> {};
+			return blankVendorList;
+		}
 
+		public static void ClearVendors()
+		{
+			_vendorList.Clear();
+		}
 	}
 }
