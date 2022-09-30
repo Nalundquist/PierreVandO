@@ -28,5 +28,16 @@ namespace PierreVandO.Models
 		{
 			_vendorList.Clear();
 		}
+
+		public static Vendor FindVendor(int id)
+		{
+			Vendor vendor = _vendorList[id-1];
+			return vendor;
+		}
+
+		public void AddOrder(Order order)
+		{
+			
+		}
 	}
 }

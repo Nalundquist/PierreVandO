@@ -47,5 +47,14 @@ namespace PierreVandO.Tests
 			Vendor foundVendor = Vendor.FindVendor(2);
 			Assert.AreEqual(foundVendor, vendor2);
 		}
+
+		[TestMethod]
+		public void AddOrder_AddOrdertoVendor_Order()
+		{
+			Vendor vendor1 = new Vendor("Businesso", "Requires Vendors to Live");
+			Order order2 = new Order("Purchesa", "Full of Croissants", "$10.99", "Orgust 1rd, 2099");
+			vendor1.AddOrder(order2);
+			Assert.AreEqual(order2, vendor1.VendorOrders[0]);
+		}
 	}
 }

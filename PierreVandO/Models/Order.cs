@@ -32,9 +32,10 @@ namespace PierreVandO.Models
 			_orderList.Clear();
 		}
 
-		public static Order FindOrder(int id);
+		public static Order FindOrder(int id)
 		{
-			
+			Order order = _orderList[id-1];
+			return order;
 		}
 	}
 }
