@@ -10,4 +10,12 @@ body{
 #footer{
 	background-color: rgb(219, 89, 102);
 	border-top: 8px solid brown;
+	padding: 30px;
+}
+
+#wrapper{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 15%;
+	margin-right: 20%;
 }

@@ -26,6 +26,7 @@ namespace PierreVandO
     public void Configure(IApplicationBuilder app)
     {
 			app.UseRouting();	
+			app.UseStaticFiles();
 
       app.UseEndpoints(routes =>
       {
