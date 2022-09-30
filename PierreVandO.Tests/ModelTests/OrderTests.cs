@@ -33,8 +33,19 @@ namespace PierreVandO.Tests
 			Order order1 = new Order("Listle", "Overflowing with Eclairs", "$11.99", "Smarch 50th, 2099");
 			Order order2 = new Order("Purchesa", "Full of Croissants", "$10.99", "Orgust 1rd, 2099");
 			Order order3 = new Order("Ordie", "Adores containing Items", "$1.99", "Fleburary 33rd, 2099");
-			List<Order> orderList = new List<Order> {order1, order2, order3};
-			Assert.AreEqual(orderList, Order.GetOrders());
+			List<Order> orderList1 = new List<Order> {order1, order2, order3};
+			List<Order> orderList2 = Order.GetOrders();
+			Assert.AreEqual(orderList1[1], orderList2[1]);
+		}
+
+		[TestMethod]
+		public void FindOrder_ReturnsOrder_Order()
+		{
+			Order order1 = new Order("Listle", "Overflowing with Eclairs", "$11.99", "Smarch 50th, 2099");
+			Order order2 = new Order("Purchesa", "Full of Croissants", "$10.99", "Orgust 1rd, 2099");
+			Order order3 = new Order("Ordie", "Adores containing Items", "$1.99", "Fleburary 33rd, 2099");
+			Order foundOrder = Order.FindOrder(2);
+			Assert.AreEqual(foundOrder, order2);
 		}
 	}
 }

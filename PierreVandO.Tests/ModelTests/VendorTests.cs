@@ -33,8 +33,19 @@ namespace PierreVandO.Tests
 			Vendor vendor1 = new Vendor("Businesso", "Requires Vendors to Live");
 			Vendor vendor2 = new Vendor("Vendy", "Loves to Vend");
 			Vendor vendor3 = new Vendor("Reginald Exchangington III", "Buying and Selling Items: Can't Imagine Life without It.");
-			List<Vendor> vendorList = new List<Vendor> {vendor1, vendor2, vendor3};
-			Assert.AreEqual(vendorList, Vendor.GetVendors());
+			List<Vendor> vendorList1 = new List<Vendor> {vendor1, vendor2, vendor3};
+			List<Vendor> vendorList2 = Vendor.GetVendors();
+			Assert.AreEqual(vendorList1[2], vendorList2[2]);
+		}
+
+		[TestMethod]
+		public void FindVendor_ReturnsVendor_Vendor()
+		{
+			Vendor vendor1 = new Vendor("Businesso", "Requires Vendors to Live");
+			Vendor vendor2 = new Vendor("Vendy", "Loves to Vend");
+			Vendor vendor3 = new Vendor("Reginald Exchangington III", "Buying and Selling Items: Can't Imagine Life without It.");
+			Vendor foundVendor = Vendor.FindVendor(2);
+			Assert.AreEqual(foundVendor, vendor2);
 		}
 	}
 }

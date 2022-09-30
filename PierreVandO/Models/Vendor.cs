@@ -21,8 +21,7 @@ namespace PierreVandO.Models
 
 		public static List<Vendor> GetVendors()
 		{
-			List<Vendor> blankVendorList = new List<Vendor> {};
-			return blankVendorList;
+			return _vendorList;
 		}
 
 		public static void ClearVendors()

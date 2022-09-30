@@ -24,13 +24,17 @@ namespace PierreVandO.Models
 
 		public static List<Order> GetOrders()
 		{
-			List<Order> blankOrderList = new List<Order> {};
-			return blankOrderList;
+			return _orderList;
 		}
 
 		public static void ClearOrders()
 		{
 			_orderList.Clear();
+		}
+
+		public static Order FindOrder(int id);
+		{
+			
 		}
 	}
 }
